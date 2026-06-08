@@ -1,11 +1,15 @@
 {
   "name": "a3-gqs-career-api",
   "version": "1.0.0",
-  "description": "API CapacitaPro - A3 GQS",
+  "description": "API de oportunidades de emprego, trilhas de aprendizado e cursos",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage --forceExit",
+    "test:unit": "jest tests/unit --forceExit",
+    "test:integration": "jest tests/integration --forceExit",
+    "test:system": "jest tests/system --forceExit"
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -13,6 +17,8 @@
     "cors": "^2.8.5"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
     "nodemon": "^3.0.2"
   }
 }
